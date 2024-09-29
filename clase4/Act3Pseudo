@@ -1,0 +1,32 @@
+GREEDY --- carga de camión ~ variante de la mochila fraccionaria 
+
+/*
+Podemos fraccioanr mercancía
+OBJETIVO: maximizar el valor total de los elems cargados en cada camión sin superar la capacidad
+ en galllego - que en cad acamión pueda entrar la mayor cantidad de cosas sin pasarme
+*/
+
+CREAR CLASE DE MERCANCIA ASÍ PUEDO MANEJAR BIEN EL PESO Y EL VALOR
+
+
+funcion maximizarCapacidad(capacidad, mercancias):
+    ordenarDescendente(mercancía, porValorPorPeso) ---> ordenamos los elems
+    cargaTotal = 0 ---> comienzo la variable para ir chequeando la carga del camión
+    valorTotal = 0 ---> lo que voy a retornar 
+
+    para cada mercancia en mercancias: ---> Ciclo for
+        si capacidad == 0: ---> ciclo if 
+            break
+
+
+        si pesoMercancia <= capacidad: ---> Ciclo  if. puede ser que el peso es mucho menor o hasta igual entonces lo agrego al camión
+            agregar mercancia completa a carga
+                capacidad = capacidad - pesoMercancia ---> le resto al camion esta mercancia agregada
+                valorTotal = valorTotal + valorMercancia ---> al valor total le agrego el valor de lo que cargue
+        sino:---> Ciclo else . en el caso que no entre, agrego un poco de el
+            fracionada = capacida / pesoMercancia ---> de la capacidad actual, si yo la divido por el peso cuanto me dejara cargar
+            agregar fraccionda a carga
+            valorTotal = valorTotal + valorMercancia * fraccionda
+            capacidad = 0 ---> el camionesta lleno si es que tuve que fraccionariar
+    
+    retornar valorTotal
