@@ -1,4 +1,3 @@
-package asd.clase3;
 /*
  * ### Actividad 2
 
