@@ -1,0 +1,24 @@
+
+function encontarDosMayores(listaClientes)
+    si listaClientes tiene 1 solo
+        retornar -1 -> no es posible
+    si listaClientes tiene 2 solo
+        si elem 1 es mayor que elem 2
+            retorno elem 1
+        sino   
+            retorno elem 2
+    
+
+    dividir en dos 
+
+    <!Complicado>
+    mayorIzq = encontarDosMayores(inicio, mitad-1)
+    mayorDer = encontarDosMayores(mitad+1, fin)
+
+    </Complicado>
+
+    mayorGlobal = mayor que entre mayorIzq y mayorDer
+    segundoMayorGlobal = seguno mayor entre mayorIzq y mayorDer
+
+    retorno mayorGlobal, segundoMayorGlobal
+
