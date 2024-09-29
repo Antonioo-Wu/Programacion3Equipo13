@@ -1,0 +1,14 @@
+Actividad 2
+Una empresa de logística tiene varios centros de distribución en diferentes ciudades de 
+una región y necesita optimizar las rutas de entrega de sus camiones. Cada centro de 
+distribución está conectado a otros centros mediante carreteras, y cada carretera tiene 
+un tiempo de viaje asociado en minutos. Además, algunos centros pueden tener costos 
+adicionales asociados que pueden resultar en tiempos negativos en algunas rutas 
+debido a descuentos especiales o condiciones excepcionales. La empresa desea no 
+solo minimizar el tiempo total de entrega desde su centro de distribución principal hasta 
+todas las otras ciudades, sino también identificar si existen ciclos negativos que podrían 
+llevar a oportunidades de ahorro infinito en el sistema de rutas.
+Objetivo:
+Aplicar el algoritmo de Floyd-Warshall para: Encontrar el tiempo mínimo de entrega 
+desde el centro de distribución principal hasta todos los demás centros de distribución, 
+considerando las diferentes rutas disponibles.
