@@ -3,7 +3,6 @@
  * menores que el pivote a su izquierda y todos los mayores a su derecha.
  * Luego, devuelve el índice del pivote.
  */
-package asd.clase2;
 
 /*
  * Dado un array desordenado, ordenarlo utilizando 
