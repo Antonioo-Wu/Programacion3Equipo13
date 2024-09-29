@@ -1,0 +1,16 @@
+function encontrarDosMaxScore(clientes)
+    si el tamaño de la lista es de 2
+        si clientes[0] > clientes[1]
+            devuelvo clientes[0],clientes[1]
+        sino
+            devuelvo clientes[1], clientes[0]
+    
+    parto la lista a la mitad
+
+    mayorIzq = encontrarDosMaxScore(clientes[ini, mitad-1)
+    mayorDer = encontrarDosMaxScore(clientes[mitad, fin])
+
+    mayorGlobal = cliente con mayor scoring entre mayorIzq y mayorDer
+    segundoMayorGlobal = me fijo con los que queda de los mayores
+
+    deulvo( mayorGlobal, segundoMayorGlobal)
