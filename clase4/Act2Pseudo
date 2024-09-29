@@ -1,0 +1,17 @@
+GREEDY  ---> (quiero el menor numero de comprobantes)
+
+---> no estoy segura de los comprobantes por default así que lo entro por teclado por las dudas
+
+funcion minimizarComprobantes(valordecompra, comprobantes)
+    ordenarDescendente(comprobantes) ---> siempre ordenamos de mayor a menor así podemos utilizar greedy más fácil
+    contadordecomprobantes = 0 ---> esto va a ser mi valor de retorno
+
+    para cada comprobante en comprobantes ---> ciclo for O(n log n)
+        mientras valordecompra >= comprobante: ---> ciclo while O(n) verifico que pueda seguir(si quiero que lo haga hasta que sea false es un ciclo while no if) "restandole" con comprobantes
+            valordecompra = valordecompra - comprobante 
+            contadordecomprobantes incrementado ---> hago mi registro
+    
+    si el valordecompra == 0: ---> ciclo if O(n) verifico que reste todo el valor de la c0ompra
+        retorno contadordecomprobantes
+        sino
+            retorno -1 ---> 
