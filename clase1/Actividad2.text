@@ -1,0 +1,35 @@
+### Uso de `long` y `BigInteger`
+
+**`long`**:
+
+- Se usa para almacenar números enteros grandes (hasta ( 2^{63} - 1 )).
+- Ejemplo:
+    
+    ```java
+    long numeroGrande = 9223372036854775807L;
+    System.out.println("Número grande: " + numeroGrande);
+    
+    ```
+    
+
+**`BigInteger`**:
+
+- Se usa para almacenar números enteros que exceden el rango de `long`.
+- Ejemplo:
+    
+    ```java
+    import java.math.BigInteger;
+    
+    public class UsoBigInteger {
+        public static void main(String[] args) {
+            BigInteger numeroMuyGrande = new BigInteger("123456789012345678901234567890");
+            BigInteger otroNumero = new BigInteger("987654321098765432109876543210");
+            BigInteger suma = numeroMuyGrande.add(otroNumero);
+    
+            System.out.println("Suma: " + suma);
+        }
+    }
+    
+    ```
+    
+
