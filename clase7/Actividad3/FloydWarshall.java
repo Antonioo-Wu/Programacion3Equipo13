@@ -1,4 +1,4 @@
-package Clase7.Actividad3;
+package clase7.Actividad3;
 
 import java.util.Scanner;
 
