@@ -1,6 +1,7 @@
 package asd.clase2;
 
-public class Actividad2 {
+public class Actividad2 
+{
    
     // Método para realizar la búsqueda binaria
     public static int busquedaBinaria(int[] arreglo, int objetivo) {
