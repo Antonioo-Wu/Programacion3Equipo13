@@ -1,0 +1,29 @@
+Prueba de escritorio:
+capacidad total: 10
+
+objeto      peso        valor
+1           2           4
+2           5           2
+3           6           1
+4           7           6
+
+son 4 objetos: 2^4 combinaciones posibles
+
+1- sin objetos: peso total = 0, valor total = 0
+2- solo objeto 1: peso total = 2, valor total = 4
+3- solo objeto 2: peso total = 5, valor total = 2
+4- solo objeto 3: peos total = 6, valor total = 1
+5- solo objeto 4: peso total = 7, valor total = 6
+6- objeto 1 y 2: peso total = 7, valor total = 6
+7- objeto 1 y 3: peso total = 8, valor total = 5
+8- objeto 1 y 4: peso total = 9, valor total = 10
+9- objeto 2 y 3: peso total = 11 (excede la capacidad)
+10- objeto 2 y 4: peso total = 12 (excede la capacidad)
+11- objeto 3 y 4: peso total 13 (excede la capacidad)
+12- objeto 1, 2 y 3: peso total = 13 (excede la capacidad)
+13- objeto 1, 2 y 4: peso total = 14 (excede la capacidad)
+14- objeto 1, 3 y 4: peso total = 15 (excede la capacidad)
+15- objeto 2, 3 y 4: peso total = 18 (excede la capacidad)
+16- objeto 1, 2, 3 y 4: peso total = 20 (excede la capacidad)
+
+mejor combinacion: 1 y 4 con valor total 10
