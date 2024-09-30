@@ -1,0 +1,32 @@
+function nMayores(lista, n)
+    si tamaño(lista) == n
+        retornar lista ordenada
+    si tamaño(lista) == 1
+        retornar lista
+
+    mitad = tamaño(lista) / 2
+    izq = nMayores(lista[0..mitad-1], n)
+    der = nMayores(lista[mitad..tamaño(lista)-1], n)
+
+    combinar(izq, der)
+
+    si tamaño(combinada) > n
+        combinar = combinar[0..n-1]
+
+    retornar combinar
+
+function combinar(izq, der)
+    resultado = []
+    i = 0, j = 0
+
+    mientras i < tamaño(izq) y j < tamaño(der)
+        si izq[i] > der[j]
+            agregar izq[i] a resultado
+            i++
+        sino:
+            agregar der[j] a resultado
+            j++
+
+    agregar los restantes de izq o der si hay a resultado
+
+    retornar resultado
