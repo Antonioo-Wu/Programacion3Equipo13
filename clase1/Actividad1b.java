@@ -1,9 +1,12 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Actividad1b {
+
+    /* Un sistema de facturación, recibe una lista de comprobantes facturas
+    electrónicas, con id de factura, id de cliente, e importe y una lista de clientes,
+    con id cliente, y nombre de cliente, realizar un código de java, que genere
+    otra lista, con id cliente, suma importes de las facturas. */
 
     // CLASE FACTURA
     static class Factura {
