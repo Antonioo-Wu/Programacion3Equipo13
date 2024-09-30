@@ -1,0 +1,18 @@
+Prueba de escritorio:
+capacidad total: 6
+
+objeto      peso        valor
+1           3           4
+2           4           5
+3           2           3
+
+
+objeto/peso         0       1       2       3       4       5       6
+
+0                   0       0       0       0       0       0       0
+1                   0       0       0       4       4       4       4   
+2                   0       0       0       4       5       5       5
+3                   0       0       3       4       5       7       8
+
+
+valor maximo con capacidad 6: 8 con objetos 2 y 3
