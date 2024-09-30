@@ -1,0 +1,6 @@
+1. Fuerza Bruta (FB):
+Estrategia: Probar todas las combinaciones posibles de paquetes. 
+Evalúa si cada combinación cumple con el presupuesto y selecciona la que da el mayor beneficio.
+Ventaja: Encuentra siempre la solución óptima porque revisa todas las opciones.
+Desventaja: Lento cuando hay muchos paquetes, ya que su complejidad es O(2ⁿ).
+Uso: Solo para problemas pequeños con pocos paquetes debido a su tiempo de ejecución.
