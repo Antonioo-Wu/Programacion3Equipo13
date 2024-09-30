@@ -1,11 +1,11 @@
-package yo.clase5.Actividad4;
+package Actividad4;
 
 public class Actividad4 
 {
     public static void main(String[] args) 
     {
         
-        DijkstraUndirected.Graph dijkstragrafo = new DijkstraUndirected.Graph(5);
+        DijkstraUndirected.Graph dijkstragrafo = new DijkstraUndirected.Graph(5); // O(n) depende del tamaño de vertices
 
         dijkstragrafo.addEdge(0, 1, 10);
         dijkstragrafo.addEdge(0, 2, 15); // Carretera entre centro 0 y centro 2 con 15 minutos
