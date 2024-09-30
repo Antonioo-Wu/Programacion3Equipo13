@@ -1,5 +1,9 @@
 
 /*
+
+    Implementa el método getHeight en la clase BinarySearchTree para calcular la
+    altura de un Árbol Binario de Búsqueda utilizando la técnica de "Dividir y
+    Vencerás".
  *      10
        /  \
       5    20
