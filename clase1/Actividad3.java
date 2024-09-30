@@ -1,4 +1,4 @@
-package Progra3.clase1;
+
 
 public class Actividad3 {
     public static int sumaRecursiva(int n){
