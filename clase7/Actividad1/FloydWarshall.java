@@ -1,4 +1,4 @@
-package Clase7.Actividad1;
+package clase7.Actividad1;
 
 
 public class FloydWarshall {

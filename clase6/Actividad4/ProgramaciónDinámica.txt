@@ -1,0 +1,8 @@
+2. Programación Dinámica (DP):
+Estrategia: Utiliza una tabla (dp[][]) para guardar las soluciones de subproblemas
+y evitar cálculos repetidos. Va decidiendo si incluir o no cada paquete en función 
+del presupuesto disponible.
+Ventaja: Más rápido que fuerza bruta y también encuentra la solución óptima.
+Desventaja: Usa más memoria, con una complejidad de O(n * P), donde n es el número de paquetes 
+y P es el presupuesto.
+Uso: Ideal cuando necesitas la solución óptima pero con un número moderado de paquetes.

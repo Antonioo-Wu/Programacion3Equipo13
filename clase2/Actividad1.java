@@ -1,4 +1,4 @@
-package Progra3.clase2;
+
 /*
  *      10
        /  \

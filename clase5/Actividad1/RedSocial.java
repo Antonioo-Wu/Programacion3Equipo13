@@ -2,77 +2,77 @@ package Actividad1;
 
 import java.util.*;
 
-
-public class RedSocial 
-{
-    static class usuario
-    {
+public class RedSocial {
+    static class usuario {
         int id;
         String nombre;
 
-        usuario(int id, String nombre)
-        {
+        usuario(int id, String nombre){
             this.id = id;
             this.nombre = nombre;
         }
 
         @Override
-        public String toString()
-        {
+        public String toString(){
             return "id: " + this.id + " nombre: " + this.nombre;
         }
     }
 
-    static class redSocial
-    {
+    static class redSocial{
+        // La clave es un objeto usuario y el valor es una 
+        // lista de objetos usuario que representan a los usuarios seguidos por el usuario clave.
         private Map<usuario, List<usuario>> matriz;
 
-        public redSocial()
-        {
+        public redSocial(){
             this.matriz = new HashMap<>();
         }
 
-        public void agregarUsuario(usuario u)
-        {
+        // Complejidad: O(1) en promedio
+        public void agregarUsuario(usuario u){
             matriz.putIfAbsent(u, new ArrayList<>());
         }
 
+        // Complejidad: O(n) en el peor caso
         public void seguir(usuario seguidor, usuario seguido)
         {
-            matriz.putIfAbsent(seguidor, new ArrayList<>()); //agrega los usuarios si no estan en la red social
-            matriz.putIfAbsent(seguidor, new ArrayList<>());
+            matriz.putIfAbsent(seguidor, new ArrayList<>()); // O(1) en promedio
+            matriz.putIfAbsent(seguidor, new ArrayList<>()); // O(1) en promedio
 
-            List<usuario> seguidores = matriz.get(seguidor);
-            if (!seguidores.contains(seguido))
-                seguidores.add(seguido);
+            List<usuario> seguidores = matriz.get(seguidor); // O(1) en promedio
+            if (!seguidores.contains(seguido)) // O(n) donde n es el número de seguidos
+                seguidores.add(seguido); // O(1) en promedio
         }
 
+        // Complejidad: O(n) en el peor caso
         public void dejarDeSeguir(usuario seguidor, usuario seguido)
         {
-            List<usuario> seguidores = matriz.get(seguidor);
+            List<usuario> seguidores = matriz.get(seguidor); // O(1) en promedio
             if (seguidores != null)
-                seguidores.remove(seguido);
+                seguidores.remove(seguido); // O(n) donde n es el número de seguidos
         }
 
+        // Complejidad: O(1)
         public List<usuario> listarSeguidos(usuario u)
         {
-            return matriz.get(u);
+            return matriz.get(u); // O(1)
         }
 
+        // Complejidad: O(m * n) en el peor caso
         public List<usuario> listarSeguidores(usuario u)
         {
             List<usuario> seguidores = new ArrayList<>();
-            for (usuario usuario : matriz.keySet())
+            for (usuario usuario : matriz.keySet()) // O(m) donde m es el número de usuarios
             {
-                if (matriz.get(usuario).contains(u))
+                if (matriz.get(usuario).contains(u)) // O(n) donde n es el número de seguidos
                 {
-                    seguidores.add(usuario);
+                    seguidores.add(usuario); // O(1) en promedio
                 }
             }
             return seguidores;
         }
-
     }
+
+
 
 
     public static void main(String[] args) 
