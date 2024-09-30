@@ -1,0 +1,39 @@
+Actividad 2
+Una empresa de logística tiene varios centros de distribución en diferentes ciudades de 
+una región y necesita optimizar las rutas de entrega de sus camiones. Cada centro de 
+distribución está conectado a otros centros mediante carreteras, y cada carretera tiene 
+un tiempo de viaje asociado en minutos. Además, algunos centros pueden tener costos 
+adicionales asociados que pueden resultar en tiempos negativos en algunas rutas 
+debido a descuentos especiales o condiciones excepcionales. La empresa desea no 
+solo minimizar el tiempo total de entrega desde su centro de distribución principal hasta 
+todas las otras ciudades, sino también identificar si existen ciclos negativos que podrían 
+llevar a oportunidades de ahorro infinito en el sistema de rutas.
+Objetivo:
+Aplicar el algoritmo de Floyd-Warshall para: Encontrar el tiempo mínimo de entrega 
+desde el centro de distribución principal hasta todos los demás centros de distribución, 
+considerando las diferentes rutas disponibles.
+
+
+
+Comentarios y Explicación:
+Inicialización:
+
+La matriz dist[][] se inicializa con los valores del grafo de entrada. Si no hay conexión entre dos nodos, se asigna el valor INF (infinito).
+La matriz P[][] es utilizada para reconstruir los caminos más cortos entre nodos. Se inicializa con los 
+valores de los caminos directos.
+
+Relajación de Caminos:
+
+En el bucle anidado de tres niveles, se itera sobre todos los pares de nodos (i, j) y se verifica si 
+el nodo intermedio k ofrece un camino más corto entre ellos.
+Si un nuevo camino más corto es encontrado, se actualiza la matriz dist[][] con la nueva distancia 
+y se actualiza P[i][j] para mantener el siguiente nodo en el camino.
+
+Ciclos Negativos:
+
+Al finalizar, se revisa si existen ciclos negativos. Esto ocurre si la distancia mínima de un nodo a 
+sí mismo (dist[i][i]) es negativa. Un ciclo negativo indica la posibilidad de un "ahorro infinito", 
+lo que puede ser problemático en muchas aplicaciones.
+Impresión de Caminos:
+
+La función imprimirCamino() reconstruye el camino desde el nodo i al nodo j utilizando la matriz P[][].

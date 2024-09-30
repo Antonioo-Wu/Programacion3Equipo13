@@ -2,9 +2,7 @@
  * El método partición toma el último elemento como pivote y coloca todos los elementos
  * menores que el pivote a su izquierda y todos los mayores a su derecha.
  * Luego, devuelve el índice del pivote.
- */
-
-/*
+ * 
  * Dado un array desordenado, ordenarlo utilizando 
  * quicksort. Utilizar el código base que está en 
  * el repo de la materia
