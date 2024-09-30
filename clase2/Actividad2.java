@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 
 
-public class Actividad2 {
-   
-=======
 public class Actividad2 
 {
     
->>>>>>> 360bee42724c126ad6f607b80a7a63e238b4e849
     // Método para realizar la búsqueda binaria
     public static int busquedaBinaria(int[] arreglo, int objetivo) {
         int izquierda = 0; // comienzo
