@@ -1,6 +1,8 @@
-
-
 public class Actividad3 {
+
+    /* Sumar los primeros n números enteros, implementando en java un algoritmo que
+    use recursión. */
+
     public static int sumaRecursiva(int n){
         if(n == 0){  // caso base -> complejidad O(1)
             return 0; //  O(1)
