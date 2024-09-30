@@ -1,0 +1,10 @@
+GREEDY ---> (utilizo el enfoque de ejes de banco como siempre)
+
+funcion cambioMoneda(cambio,moneda)
+    ordenarDescendente(monedas) ---> greedy mindset
+    para cada moneda en monedas ---> ciclo for O(n log n)
+        mientras cmabio >= moneda
+            cambio = cambio - moneda ---> vamos reduciendo 
+    si cambio == 0
+        retornar true ---> puedo dar cambio o si es necesario en el primer lugar
+    retornar false ---> no puedo dar cambio
