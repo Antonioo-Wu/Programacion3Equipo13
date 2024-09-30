@@ -1,6 +1,12 @@
 package Actividad3;
 import java.util.*;
 
+/*
+ * O(V2) ---> dondeV es el número de vértices. Esto se debe a que 
+ * se necesita verificar todos los vértices 
+ * para encontrar el de menor costo en cada iteración.
+ */
+
 public class PrimAlgorithm 
 {
     private static final int INF = Integer.MAX_VALUE;

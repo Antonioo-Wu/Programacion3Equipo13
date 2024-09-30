@@ -3,13 +3,11 @@ import java.util.*;
 
 public class Actividad3 
 {
-    static class grafo
-    {
+    static class grafo{
         private List<List<int[]>> matriz;
         private int numVertices;
 
-        grafo(int n)
-        {
+        grafo(int n){
             this.numVertices = n;
             matriz = new ArrayList<>(n);
             for (int i = 0; i < n; i++)
