@@ -48,9 +48,10 @@ public class FloydWarshall {
                     P[i][j] = -1;  // Si no hay camino, inicializamos con -1
                 }
             }
-        }
+        } // Complejidad O(n³) ---> :(
 
-        // Aquí aplicamos el algoritmo de Floyd-Warshall
+
+        // Aplicamos el algoritmo de Floyd-Warshall
         // Para cada nodo intermedio 'k'
         for (int k = 0; k < V; k++) {
             // Para cada par de nodos (i, j)

@@ -1,0 +1,15 @@
+Dada una mochila con una capacidad máxima de peso P, y dispones de n objetos. 
+Cada objeto tiene un peso w y un valor v.
+El objetivo es seleccionar algunos objetos 
+de manera que maximicen el valor total,
+sin superar la capacidad de la mochila, que es de 10
+
+Se pide realizar una prueba de escritorio
+para fuerza bruta y para programación
+dinámica, indicando el resultado.
+
+Objeto Peso Valor
+  1 	2     4
+  2 	5     2
+  3 	6     1
+  4 	7     6

@@ -1,5 +1,11 @@
-package progra3.clase5.Actividad3;
+package Actividad3;
 import java.util.*;
+
+/*
+ * O(V2) ---> dondeV es el número de vértices. Esto se debe a que 
+ * se necesita verificar todos los vértices 
+ * para encontrar el de menor costo en cada iteración.
+ */
 
 public class PrimAlgorithm 
 {

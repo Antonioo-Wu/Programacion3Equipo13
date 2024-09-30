@@ -1,0 +1,6 @@
+3. Algoritmo Greedy:
+Estrategia: Selecciona los paquetes ordenados por ganancia, de mayor a menor, 
+hasta que el presupuesto no permita incluir más.
+Ventaja: Muy rápido, con complejidad O(n log n) por la ordenación.
+Desventaja: No garantiza la solución óptima en todos los casos.
+Uso: Útil cuando necesitas una solución rápida y aceptas no siempre obtener la óptima.

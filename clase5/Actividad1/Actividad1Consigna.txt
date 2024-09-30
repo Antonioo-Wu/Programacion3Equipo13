@@ -1,0 +1,15 @@
+Estructuras de Datos:
+Usa una clase o estructura Usuario que tenga un identificador único (por ejemplo, un 
+nombre o un número de ID).
+Utiliza un diccionario o un mapa para mantener la lista de adyacencia, donde cada clave 
+es un Usuario y el valor asociado es una lista de usuarios que ese usuario sigue.
+
+Operaciones Requeridas:
++ Agregar Usuario: Permite agregar un nuevo usuario al sistema.
++ Seguir: Permite que un usuario siga a otro. Si el usuario ya sigue al destinatario, la 
+operación no debe tener efecto.
++ Dejar de Seguir: Permite que un usuario deje de seguir a otro. Si el usuario no sigue al 
+destinatario, la operación no debe tener efecto.
++ Lista de Seguidores: Permite consultar la lista de usuarios que sigue un usuario dado.
++ Lista de Seguidores de: Permite consultar la lista de usuarios que siguen a un usuario 
+dado
