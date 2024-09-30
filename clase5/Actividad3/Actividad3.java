@@ -1,4 +1,4 @@
-package progra3.clase5.Actividad3;
+package Actividad3;
 import java.util.*;
 
 public class Actividad3 

@@ -1,5 +1,4 @@
 
-package Progra3.clase4;
 
 import java.util.Arrays;
 
