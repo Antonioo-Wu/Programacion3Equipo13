@@ -1,0 +1,27 @@
+// Lo que quiero lograr es olocar dos reinas en un tablero 4x4 de manera que no se ataquen entre sí.
+
+FUNCIÓN esSeguro(tablero, fila, columna):
+    PARA cada fila en tablero:
+        SI hay una reina en la misma fila o columna:
+            RETORNAR FALSO
+        SI hay una reina en la misma diagonal:
+            RETORNAR FALSO
+    RETORNAR VERDADERO
+
+FUNCIÓN colocarReinas(tablero, reinasColocadas, fila):
+    SI reinasColocadas == 2:
+        IMPRIMIR tablero
+        RETORNAR
+
+    PARA columna DESDE 0 HASTA 3:
+        SI esSeguro(tablero, fila, columna):
+            COLOCAR reina en tablero[fila][columna]
+            colocarReinas(tablero, reinasColocadas + 1, fila + 1)
+            REMOVER reina de tablero[fila][columna]  // Backtracking
+
+FUNCIÓN resolverTablero():
+    CREAR tablero vacío de 4x4
+    colocarReinas(tablero, 0, 0)
+
+INICIO DEL PROGRAMA:
+    resolverTablero()
