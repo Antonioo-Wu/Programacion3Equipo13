@@ -1,0 +1,31 @@
+// Lo que quiero lograr es  Colocar 4 computadoras y 4 impresoras en un tablero 4x4 
+// respetando las restricciones de no compartir filas o columnas
+
+FUNCIÓN esSeguro(tablero, fila, columna):
+    PARA cada fila en tablero:
+        SI hay una computadora o impresora en la misma fila o columna:
+            RETORNAR FALSO
+    RETORNAR VERDADERO
+
+FUNCIÓN colocarComputadorasEImpresoras(tablero, computadorasColocadas, impresorasColocadas, fila):
+    SI computadorasColocadas == 4 Y impresorasColocadas == 4:
+        IMPRIMIR tablero
+        RETORNAR
+
+    PARA columna DESDE 0 HASTA 3:
+        SI computadorasColocadas < 4 Y esSeguro(tablero, fila, columna):
+            COLOCAR computadora en tablero[fila][columna]
+            colocarComputadorasEImpresoras(tablero, computadorasColocadas + 1, impresorasColocadas, fila + 1)
+            REMOVER computadora de tablero[fila][columna]  // Backtracking
+
+        SI impresorasColocadas < 4 Y esSeguro(tablero, fila, columna):
+            COLOCAR impresora en tablero[fila][columna]
+            colocarComputadorasEImpresoras(tablero, computadorasColocadas, impresorasColocadas + 1, fila + 1)
+            REMOVER impresora de tablero[fila][columna]  // Backtracking
+
+FUNCIÓN resolverDistribucion():
+    CREAR tablero vacío de 4x4
+    colocarComputadorasEImpresoras(tablero, 0, 0, 0)
+
+INICIO DEL PROGRAMA:
+    resolverDistribucion()

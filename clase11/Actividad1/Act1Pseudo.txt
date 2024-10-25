@@ -1,0 +1,11 @@
+FUNCIÓN DFS(grafo, nodo_inicial, visitado):
+    Marcar nodo_inicial como visitado
+    Imprimir nodo_inicial
+    PARA cada nodo i en grafo[nodo_inicial]:
+        SI grafo[nodo_inicial][i] == 1 Y visitado[i] == FALSO:
+            Llamar recursivamente a DFS(grafo, i, visitado)
+
+INICIO DEL PROGRAMA:
+    Definir grafo como una matriz de adyacencia
+    Inicializar arreglo visitado como FALSO para todos los nodos
+    Llamar a DFS(grafo, 0, visitado)

@@ -1,0 +1,30 @@
+Clase Nodo:
+    Atributos:
+        nombre (String)
+        costo (int)
+    Constructor:
+        Inicializa nombre y costo
+
+Clase SistemaSeleccionViajes:
+    Atributos:
+        grafo: Mapa que almacena listas de nodos
+
+    Método: añadirVuelo
+        Si no existe una lista de nodos desde origen
+            Crear una lista vacía
+        Añadir un nodo de destino con su costo a la lista del origen
+
+    Método: uniformCostSearch
+        Inicializar cola de prioridad para almacenar nodos según costo
+        Añadir nodo inicial a la cola con costo 0
+        Inicializar conjunto para nodos visitados
+        Mientras la cola no esté vacía
+            Eliminar y obtener nodo con menor costo
+            Si nodo actual es destino
+                Retornar costo
+            Si nodo ya fue visitado
+                Ignorar
+            Marcar nodo como visitado
+            Para cada nodo vecino del nodo actual
+                Si vecino no ha sido visitado
+                    Añadir a la cola con costo acumulado
