@@ -1,0 +1,10 @@
+Diseña e implementa un sistema que modele una red social utilizando grafos.
+Cada usuario será un nodo, y las amistades entre usuarios serán las aristas. El
+sistema debe permitir:
+Agregar usuarios a la red, cada uno con un identificador único y nombre.
+Conectar usuarios indicando que son amigos (relación bidireccional).
+Implementar un método para realizar un recorrido DFS (Depth First Search)
+desde un usuario dado, mostrando los usuarios alcanzables a través de sus
+amistades.
+Implementar un recorrido BFS (Breadth First Search) para explorar la red desde
+un usuario dado, siguiendo las conexiones de amistad.

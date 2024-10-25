@@ -1,0 +1,12 @@
+Desarrolla una aplicación que permita modelar una red de almacenes
+interconectados. El sistema debe permitir agregar almacenes, conectar
+almacenes entre sí mediante rutas directas, y realizar recorridos en profundidad
+(DFS) y en anchura (BFS) para explorar la red de distribución. Implementa una
+clase Almacen que represente un almacén. Cada almacén debe tener un
+identificador único y un nombre. Implementa una clase Grafo que gestione la red
+de almacenes. Esta clase debe: Permitir agregar almacenes al grafo. Permitir
+conectar almacenes entre sí (crear rutas directas entre almacenes). Implementar
+un método DFS para realizar un recorrido en profundidad desde un almacén de
+inicio. Implementar un método BFS para realizar un recorrido en anchura desde
+un almacén de inicio.El grafo debe estar representado utilizando una lista de
+adyacencia.
