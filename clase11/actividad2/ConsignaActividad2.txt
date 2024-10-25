@@ -1,0 +1,9 @@
+Dado el siguiente grafo, generar el recorrido BFS, a partir del nodo 0.
+
+      / ─ 1
+     0   /  \
+    /	  /    \
+   2    3     4
+   |    |    / \
+   5    6   7   8
+    
