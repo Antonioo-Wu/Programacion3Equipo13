@@ -1,0 +1,31 @@
+// Lo que quiero lograr es colocar escritorios y sillas en un tablero 4x4 respetando 
+// la restricción de que no pueden estar en la misma fila o columna
+
+FUNCIÓN esSeguro(tablero, fila, columna):
+    PARA cada fila en tablero:
+        SI hay un escritorio o silla en la misma fila o columna:
+            RETORNAR FALSO
+    RETORNAR VERDADERO
+
+FUNCIÓN colocarEscritoriosYSillas(tablero, escritoriosColocados, sillasColocadas, fila):
+    SI escritoriosColocados == 4 Y sillasColocadas == 4:
+        IMPRIMIR tablero
+        RETORNAR
+
+    PARA columna DESDE 0 HASTA 3:
+        SI escritoriosColocados < 4 Y esSeguro(tablero, fila, columna):
+            COLOCAR escritorio en tablero[fila][columna]
+            colocarEscritoriosYSillas(tablero, escritoriosColocados + 1, sillasColocadas, fila + 1)
+            REMOVER escritorio de tablero[fila][columna]  // Backtracking
+
+        SI sillasColocadas < 4 Y esSeguro(tablero, fila, columna):
+            COLOCAR silla en tablero[fila][columna]
+            colocarEscritoriosYSillas(tablero, escritoriosColocados, sillasColocadas + 1, fila + 1)
+            REMOVER silla de tablero[fila][columna]  // Backtracking
+
+FUNCIÓN resolverDistribucion():
+    CREAR tablero vacío de 4x4
+    colocarEscritoriosYSillas(tablero, 0, 0, 0)
+
+INICIO DEL PROGRAMA:
+    resolverDistribucion()
