@@ -1,8 +1,8 @@
 # Programacion3Equipo13
 
 **Profesor: Caceres, Manuel**
-_Diseño y Análisis de Algoritmos_
-Lunes ~ Turno Tarde.
+_Diseño y Análisis de Algoritmos_ 
+> Lunes ~ Turno Tarde.
 
 ## Integrantes
 * Antonio Wu
