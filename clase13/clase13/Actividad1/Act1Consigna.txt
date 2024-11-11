@@ -1,0 +1,17 @@
+Copiar el código de muestra que está en el repo de la materia y observar en 
+python tutor
+
+* ¿Cómo funciona el backtracking en este problema?
+* ¿Qué pasa cuando el algoritmo encuentra una solución? 
+* ¿Qué ocurre cuando no  puede colocar más reinas?
+
+* ¿Qué sucede en el código cuando el algoritmo "retrocede"? ¿Cómo se visualiza 
+en Python Tutor?
+
+* ¿Qué modificaciones harías para aumentar N a 8? ¿Cómo crees que cambiaría el 
+tiempo de ejecución?
+
+* ¿Por qué el método isSafe es crucial en este algoritmo?
+
+
+// código en la carpeta de backtracking
