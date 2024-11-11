@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>F1 API</title>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Crear/Actualizar Equipo</h2>
+            <div class="form-group">
+                <input type="number" id="idEquipo" placeholder="ID del equipo" required>
+                <input type="text" id="nombreEquipo" placeholder="Nombre del equipo" required>
+                <input type="number" id="rivalId" placeholder="ID del rival" required>
+                <button onclick="crearEquipo()">Crear/Actualizar Equipo</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Crear Corredor</h2>
+            <div class="form-group">
+                <input type="text" id="nombreCorredor" placeholder="Nombre del corredor" required>
+                <input type="text" id="paisCorredor" placeholder="Pais del corredor" required>
+                <input type="number" id="equipoIdCorredor" placeholder="ID del equipo" required>
+                <button onclick="crearCorredor()">Crear Corredor</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Recorridos</h2>
+            <div class="form-group">
+                <input type="number" id="equipoIdRecorrido" placeholder="ID del equipo" required>
+                <button onclick="obtenerDFS()">DFS</button>
+                <button onclick="obtenerBFS()">BFS</button>
+                <button onclick="obtenerBacktracking()">Backtracking</button>
+                <button onclick="obtenerPodaAlfaBeta()">Poda Alfa-Beta</button>
+            </div>
+            <div id="resultadoRecorrido" class="result"></div>
+        </div>
+
+        <div class="section">
+            <h2>Lista de Equipos</h2>
+            <div class="form-group">
+                <button onclick="obtenerEquipos()">Obtener Equipos</button>
+            </div>
+            <div id="listaEquipos" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8080/api/f1';
+
+        async function crearEquipo() {
+            const id = document.getElementById('idEquipo').value;
+            const nombre = document.getElementById('nombreEquipo').value;
+            const rivalId = document.getElementById('rivalId').value;
+
+            const response = await fetch(`${API_URL}/equipo?rivalId=${rivalId}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: parseInt(id), nombre: nombre })
+            });
+
+            const data = await response.json();
+            alert('Equipo creado con ID: ' + data.id);
+        }
+
+        async function crearCorredor() {
+            const nombre = document.getElementById('nombreCorredor').value;
+            const pais = document.getElementById('paisCorredor').value;
+            const equipoId = document.getElementById('equipoIdCorredor').value;
+            
+            if (!nombre || !pais || !equipoId) {
+                alert('Todos los campos son requeridos');
+                return;
+            }
+
+            try {
+                const equipoResponse = await fetch(`${API_URL}/equipos`);
+                const equipos = await equipoResponse.json();
+                const equipoExiste = equipos.some(e => e.id === parseInt(equipoId));
+                
+                if (!equipoExiste) {
+                    alert('El equipo con ID ' + equipoId + ' no existe');
+                    return;
+                }
+
+                const response = await fetch(`${API_URL}/corredor`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        nombre: nombre,
+                        pais: pais,
+                        equipo: { id: parseInt(equipoId) }
+                    })
+                });
+                const data = await response.json();
+                alert('Corredor creado con ID: ' + data.id);
+            } catch (error) {
+                alert('Error: ' + error);
+            }
+        }
+
+        async function obtenerDFS() {
+            const equipoId = document.getElementById('equipoIdRecorrido').value;
+            await obtenerRecorrido('dfs', equipoId);
+        }
+
+        async function obtenerBFS() {
+            const equipoId = document.getElementById('equipoIdRecorrido').value;
+            await obtenerRecorrido('bfs', equipoId);
+        }
+
+        async function obtenerBacktracking() {
+            const equipoId = document.getElementById('equipoIdRecorrido').value;
+            await obtenerRecorrido('backtracking', equipoId);
+        }
+
+        async function obtenerPodaAlfaBeta() {
+            const equipoId = document.getElementById('equipoIdRecorrido').value;
+            await obtenerRecorrido('poda-alfa-beta', equipoId);
+        }
+
+        async function obtenerRecorrido(tipo, equipoId) {
+            try {
+                const response = await fetch(`${API_URL}/${tipo}/${equipoId}`);
+                const data = await response.json();
+                document.getElementById('resultadoRecorrido').innerHTML = 
+                    `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            } catch (error) {
+                alert('Error: ' + error);
+            }
+        }
+
+        async function obtenerEquipos() {
+            try {
+                const response = await fetch(`${API_URL}/equipos`);
+                const data = await response.json();
+                document.getElementById('listaEquipos').innerHTML = 
+                    `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            } catch (error) {
+                alert('Error: ' + error);
+            }
+        }
+    </script>
+</body>
+</html>
